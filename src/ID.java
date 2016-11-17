@@ -2,10 +2,10 @@
 public class ID {
 
 	private String id ;
-	
-	ID(String id)
+	private GetID getID;
+	ID()
 	{
-		this.id = id;
+		id = getID.getIDString();
 	}
 	
 	public String getID()
