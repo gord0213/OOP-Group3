@@ -1,8 +1,8 @@
 import java.util.Date;
 
-public class RefundedTicket extends Ticket{
+public class RefundTicket extends Ticket{
 
-	public RefundedTicket(String id, Seat seat, Date date){
+	public RefundTicket(String id, Seat seat, Date date){
 		super(id, seat, date);
 	}
 }
