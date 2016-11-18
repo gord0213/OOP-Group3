@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Ticket {
+public class Ticket extends ID{
 
 	private Seat seat;
 	private Date dateOfTicket;
@@ -10,7 +10,7 @@ public class Ticket {
 		this.dateOfTicket = date;
 	}
 	public String getID(){
-		return ID;
+		return super.getID();
 	}
 	
 	public Date getDate(){
