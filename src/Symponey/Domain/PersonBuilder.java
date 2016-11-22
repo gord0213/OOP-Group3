@@ -1,3 +1,4 @@
+package Symponey.Domain;
 import java.util.Date;
 
 public class PersonBuilder extends Person{
