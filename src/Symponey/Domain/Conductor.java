@@ -1,3 +1,4 @@
+package Symponey.Domain;
 
 public class Conductor extends Musician {
 
