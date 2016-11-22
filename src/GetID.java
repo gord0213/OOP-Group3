@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.security.SecureRandom;
 import java.math.BigInteger;
 
-public  class GetID {
+public class GetID {
 
 	private ArrayList<String> id;
 	private SecureRandom random = new SecureRandom();

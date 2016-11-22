@@ -2,7 +2,7 @@
 public class ID {
 
 	private String id ;
-	private GetID getID;
+	private static GetID getID;
 	ID()
 	{
 		id = getID.getIDString();
