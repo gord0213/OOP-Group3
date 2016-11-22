@@ -3,6 +3,7 @@ package Symponey.Test;
 
 
 import Symponey.Domain.Conductor;
+import Symponey.Domain.Person;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -24,7 +25,8 @@ public class Test_Conductor extends TestCase {
  	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Ticket.testConstructors");
-		per = new Person();
+		
+		per = new Person(fName, null, null, fName, null);
 		conductor = new Conductor(per)
 		assertNotNull("\t\tTest_Conductor.testConstructors: model is null", conductor);
 	}

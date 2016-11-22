@@ -4,8 +4,8 @@ public class Soloist extends Musician{
 
 	private String instrumentExpertise;
 	
-	public  Soloist(Person per){
-		
+	public  Soloist(Person per, String stageName){
+		super(per, stageName);
 	}
 	public String getExpertise(){
 		return instrumentExpertise;
