@@ -4,14 +4,17 @@ import java.math.BigInteger;
 
 public class GetID {
 
-	private ArrayList<String> id;
+	private ArrayList<String> id = new ArrayList<String>();
+	private static GetID getID ;
 	private SecureRandom random = new SecureRandom();
 
-	public GetID()
+	private GetID()
+	{}
+	public static GetID getInstance()
 	{
-		id = new ArrayList<String>();
+		return getID;
 	}
-	public String getIDString()
+	protected String getIDString()
 	{
 		String hold = new BigInteger(130, random).toString(32);
 		
