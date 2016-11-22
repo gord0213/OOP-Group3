@@ -1,4 +1,5 @@
 package Symponey.Domain;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -6,7 +7,7 @@ public class Person extends ID{
 
 	private ArrayList<PhoneNumber> phoneNumber;
 	private Name name;
-	private Address address;
+	private ArrayList<Address> address;
 	
 	private String gender;
 	private Date DOB;
@@ -14,9 +15,8 @@ public class Person extends ID{
 	public Person(String id, Address homeAddress, PhoneNumber phoneNumber, String gender, Date date){
 		super();
 		
-		this.address = homeAddress;
+		address.add(homeAddress);
 		this.phoneNumber.add(phoneNumber);		
-		this.address = homeAddress;		
 		this.gender = gender;
 		this.DOB = date;
 		
@@ -41,25 +41,31 @@ public class Person extends ID{
 	
 	
 	public Name getName(){
-		return this.name.getName();
+		return name.getName();
 	}//end getName method
 	
 	//NOT DONE YET
 	public int getAge(){
-		return 0;
+		return LocalDate.now().getYear() -DOB.getYear();
 	}//end getAge method
 	
 	public Date getDOB(){
-		return this.DOB;
+		return DOB;
 	}//end getDOB method
 	
 	public String getSalutation(){
-		return this.name.getSalutation();
+		return name.getSalutation();
 	}//end getSalutation method
 	
 	public Address getAddress(int i){
-		return this.address.getAddress();
-		//int i ????
+		if(i<address.size())
+		{
+			return address.get(i) ;
+		}
+		else
+		{
+			return null;
+		}
 	}//end getAddress method
 	
 	public void setName(String Name){
@@ -67,20 +73,12 @@ public class Person extends ID{
 	}//end setName method
 	
 	public void setAddress(Address address){
-		this.address = address;
+		this.address.add(address);
 	}//end setAddress method
 	
 	public void setPhoneNumber(PhoneNumber num){
-		this.phoneNumber = num;
+		phoneNumber.add(num);
 	}//end setPhoneNumber method
-	
-	public void setID(int id){
-		
-	}//end setID method
-	
-	public void setDOB(Date date){
-		this.DOB = date;
-	}//end setDOB method
 	
 	public void setGender(String gender){
 		this.gender = gender;
