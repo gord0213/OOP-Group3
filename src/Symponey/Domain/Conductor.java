@@ -10,8 +10,8 @@ public class Conductor extends Musician {
 	 * @param per the person the conductor represents
 	 * @param stageName the conductors stage name
 	 */
-	public Conductor(Person per, String stageName){
-		super(per, stageName);
+	public Conductor(Person per, Instrument instument, String stageName){
+		super(per, instument, stageName);
 	}
 	
 }

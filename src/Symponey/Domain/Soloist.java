@@ -12,8 +12,8 @@ public class Soloist extends Musician{
 	 * @param per a instance of the person
 	 * @param stageName The name the person uses on stage
 	 */
-	public  Soloist(Person per, String stageName){
-		super(per, stageName);
+	public  Soloist(Person per, Instrument instrument, String stageName){
+		super(per, instrument, stageName);
 	}
 	/**
 	 * 
