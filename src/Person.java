@@ -1,37 +1,43 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Person extends ID{
 
-	private PhoneNumber phoneNumber;
+	private ArrayList<PhoneNumber> phoneNumber;
 	private Name name;
 	private Address address;
 	
 	private String gender;
 	private Date DOB;
 	
-	public Person(String id, Address homeAddress, int phoneNumber, String gender, String date){
-		super(id);
-		
-		this.address = new Address();
-		this.phoneNumber = new PhoneNumber();
-		this.name = new Name();
+	public Person(String id, Address homeAddress, PhoneNumber phoneNumber, String gender, Date date){
+		super();
 		
 		this.address = homeAddress;
-		this.phoneNumber = phoneNumber;
-		
+		this.phoneNumber.add(phoneNumber);		
+		this.address = homeAddress;		
 		this.gender = gender;
-		//this.DOB = date;
+		this.DOB = date;
 		
 	}//end Person constructor
+	
 	
 	public String getGender(){
 		return this.gender;
 	}//end getGender method
 	
 	public PhoneNumber getphoneNumber(int i){
-		return this.phoneNumber.getPhoneNumber();
-		//int i ??????
+		
+		if(i<phoneNumber.size())
+		{
+			return phoneNumber.get(i);
+		}
+		else
+		{
+			return null;
+		}
 	}//end getGender method
+	
 	
 	public Name getName(){
 		return this.name.getName();

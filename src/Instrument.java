@@ -1,7 +1,6 @@
 
 public class Instrument {
 
-<<<<<<< HEAD
 	private String name;
 	private boolean owned;
 	
@@ -10,6 +9,5 @@ public class Instrument {
 		this.owned = owned;
 	}
 	
-=======
->>>>>>> 5f84286... Created Ticket, RefunedTicket, BoughtTicket, Soloist, Conductor, Instrument
+
 }
