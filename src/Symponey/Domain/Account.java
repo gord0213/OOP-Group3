@@ -1,3 +1,4 @@
+package Symponey.Domain;
 import java.util.ArrayList;
 
 import sun.security.krb5.internal.Ticket;

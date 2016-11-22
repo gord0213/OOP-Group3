@@ -1,3 +1,4 @@
+package Symponey.Domain;
 
 public class Instrument {
 
@@ -8,5 +9,10 @@ public class Instrument {
 		this.name = name;
 		this.owned = owned;
 	}
-	
+	public String getInstrument(){
+		return name;
+	}
+	public boolean getInstrumentOwned(){
+		return owned;
+	}
 }

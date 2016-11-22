@@ -1,3 +1,4 @@
+package Symponey.Domain;
 import java.util.ArrayList;
 import java.security.SecureRandom;
 import java.math.BigInteger;
