@@ -54,7 +54,7 @@ public class Account {
 	
 	/**
 	 * This method returns the Ticket at I as long as it's in bound.
-	 * If it is not in bound then it reutrns null.
+	 * If it is not in bound then it returns null.
 	 * @param i index of the ticket you are looking for
 	 * @return the ticket or null if not found
 	 */
@@ -80,7 +80,7 @@ public class Account {
 		this.balance = this.balance + balance;
 	}
 	/**
-	 * This method adds a ticket that has been bounght to the account.
+	 * This method adds a ticket that has been bought to the account.
 	 * @param t Ticket
 	 */
 	public void addTicket(Ticket t)

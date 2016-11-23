@@ -15,7 +15,8 @@ public class Ticket extends ID{
 	 * @param seat Instance of seat
 	 * @param date The date the ticket is sold
 	 */
-	public Ticket(String id, Seat seat, Date date){
+	public Ticket(Seat seat, Date date){
+		super();
 		this.seat = seat;
 		this.dateOfTicket = date;
 	}
