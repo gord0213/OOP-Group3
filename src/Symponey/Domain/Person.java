@@ -19,6 +19,27 @@ public class Person extends ID{
 		this.gender = builder.gender;
 		this.DOB = builder.DOB;
 	}
+	public Person(Person per)
+	{
+		int i =0;
+		while(per.getAddress(i) != null)
+		{
+			this.setAddress(per.getAddress(i));
+			i++;
+		}
+		i=0;
+		while(per.getphoneNumber(i) != null)
+		{
+			this.setPhoneNumber(per.getphoneNumber(i));
+			i++;
+		}
+		name = per.getName();
+		gender = per.getGender();
+		DOB = per.getDOB();
+		
+		
+		
+	}
 	
 	
 	
