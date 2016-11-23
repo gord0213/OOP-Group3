@@ -8,7 +8,7 @@ public class PitSeat extends Seat{
 	 * @param seatNumber
 	 * @param memberName
 	 */
-	public PitSeat(double price, String seatNumber) {
+	public PitSeat(double price, String seatNumber,String memberName) {
 		super(price, seatNumber);
 	}
 	
