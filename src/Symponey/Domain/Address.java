@@ -11,6 +11,19 @@ public class Address {
 	private String rr;
 	private String name;
 	
+	/**
+	 * To build an Address all of this is required
+	 * in a different situation we would use a builder here and only require the main attributes.
+	 * 
+	 * @param streetName
+	 * @param aprtNum
+	 * @param postalCode
+	 * @param country
+	 * @param province
+	 * @param poBox
+	 * @param rr
+	 * @param name
+	 */
 	public Address(String streetName, String aprtNum, String postalCode, String country, String province, String poBox, String rr, String name){
 		this.streetName = streetName;
 		this.aprtNum = aprtNum;
@@ -21,6 +34,9 @@ public class Address {
 		this.rr = rr;
 		this.name = name;
 	}//end Address constructor
+	
+	
+	// Straight forward getters and setters for this class.
 	
 	public String getStreetName(){
 		return streetName;
