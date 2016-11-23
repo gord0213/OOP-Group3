@@ -13,10 +13,10 @@ import java.util.Date;
 public class ScheduledConcert extends Concert{
 	
 	private Date date;
-	private Time timeOfConcert;
+	private Long timeOfConcert;
 	private Venue venue;
 
-	public ScheduledConcert(Concert con, Date date, Time time, Venue ven){
+	public ScheduledConcert(Concert con, Date date, Long time, Venue ven){
 		
 		super(con.getName(),con.getComposition(0));
 		this.date = date;
@@ -30,7 +30,7 @@ public class ScheduledConcert extends Concert{
 		return date;
 	}//end of get date
 	
-	public Time getTime(){
+	public Long getTime(){
 		
 		return timeOfConcert;
 	}//end of get time
@@ -45,7 +45,7 @@ public class ScheduledConcert extends Concert{
 		this.date = date;
 	}//end of set date
 	
-	public void setTime(Time time){
+	public void setTime(Long time){
 		
 		timeOfConcert = time;
 	}//end of set time

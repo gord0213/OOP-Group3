@@ -12,7 +12,7 @@ public class RefundTicket extends Ticket{
 	 * @param seat the seat that the ticket represents
 	 * @param date the date the ticket was refunded
 	 */
-	public RefundTicket(String id, Seat seat, Date date){
-		super(id, seat, date);
+	public RefundTicket( Seat seat, Date date){
+		super(seat, date);
 	}
 }
