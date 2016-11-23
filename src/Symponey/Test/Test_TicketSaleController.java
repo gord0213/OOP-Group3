@@ -56,37 +56,57 @@ public class Test_TicketSaleController extends TestCase {
 		 */
 		public void testMutators() {
 			   System.out.println("\tExecuting tTest_TicketSaleController.testMutators");
+			   // creating composition
 			   Composition tempComp = new Composition("Bach");
+			   //creating concert 
 			   Concert tempCon = new Concert("Cats", tempComp);
+			   //creating address
 			   Address tempAdd = new Address("Grisdale blvd.","", "K0E 1K0", "Canada", "Ontario", "", "R.R#1", "Home");
+			   //creating name
 			   Name tempName = new Name("Michael" , "Lawerence", "Richer", "Mr");
+			   // building person
 			   PersonBuilder build = new PersonBuilder(tempAdd,tempName);
 			   build.gender("Male");
+			   // creating person
 			   Person tempPer  =build.build();
+			   //creating instrument
 			   Instrument tempIntra = new Instrument("Clarinet", true);
+			   // building musician with person and instrament
 			   Musician tempMus = new Musician(tempPer,tempIntra, "The one" );
+			   //adding Musician to concert
 			   tempCon.addMusician(tempMus);
+			   //creating solosit with same person different stage name
 			   Soloist tempSolo = new Soloist(tempPer,tempIntra, "The Best" );
+			   //adding solosit
 			   tempComp.addSoloist(tempSolo);
+			   //Adding the conductor with the same information as the last two 
 			   Conductor tempConductor = new Conductor(tempPer,tempIntra, "The Holy One" );
+			   //setting the conductor
 			   tempComp.setConductor(tempConductor);
+			   //creating and adding 3 movements to the composition
 			   Movement tempMove = new Movement("Move one");
 			   tempComp.addMovement(tempMove);
 			   tempMove = new Movement("Move two");
 			   tempComp.addMovement(tempMove);
 			   tempMove = new Movement("Move three");
 			   tempComp.addMovement(tempMove);
+			   //adding in the composition to the concert, now has 2 compositions. default one and this one 
 			   tempCon.addComposition(tempComp);
 			   
+			   //creating address for venue
 			   tempAdd = new Address("Woodroffe","", "K2J 3G5", "Canada", "Ontario", "", "", "Word");
+			   //creating a random seat
 			   Seat tempSeat= new Seat(120.0, "A01") ;
-			   
+			   // creating venue with address and name of student commons and one seat.
 			   Venue tempVenue = new Venue(tempAdd, "Student Commons",tempSeat );
+			   //adding an instrument to the veneu
 			   tempIntra = new Instrument("Grand Piano", true);
 			   tempVenue.addInstrument(tempIntra);
+			   //created a scheduled concert with the date for today and the time of right now.
 			   ScheduledConcert schedCon = new ScheduledConcert(tempCon, new Date(), new Date().getTime(), tempVenue);
+			   //adding the concert to the season.
 			   controller.addConcert(schedCon);
-			   
+			   // making sure the added in concert equals the schedcon
 				assertEquals("\t\tTest_TicketSaleController.Mutators addConcert: equals schedCon" ,controller.getScheduledConcert(0), (schedCon));
 				
 
