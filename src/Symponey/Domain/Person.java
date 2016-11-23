@@ -8,19 +8,18 @@ public class Person extends ID{
 	private ArrayList<PhoneNumber> phoneNumber;
 	private Name name;
 	private ArrayList<Address> address;
-	
 	private String gender;
 	private Date DOB;
 	
-	public Person(String id, Address homeAddress, PhoneNumber phoneNumber, String gender, Date date){
-		super();
-		
-		address.add(homeAddress);
-		this.phoneNumber.add(phoneNumber);		
-		this.gender = gender;
-		this.DOB = date;
-		
-	}//end Person constructor
+	public Person(PersonBuilder builder)
+	{
+		this.phoneNumber = builder.phoneNumber;
+		this.name = builder.name;
+		this.address = builder.address;
+		this.gender = builder.gender;
+		this.DOB = builder.DOB;
+	}
+	
 	
 	
 	public String getGender(){
@@ -41,10 +40,10 @@ public class Person extends ID{
 	
 	
 	public Name getName(){
-		return name.getName();
+		return name;
 	}//end getName method
 	
-	//NOT DONE YET
+
 	public int getAge(){
 		return LocalDate.now().getYear() -DOB.getYear();
 	}//end getAge method
@@ -68,7 +67,7 @@ public class Person extends ID{
 		}
 	}//end getAddress method
 	
-	public void setName(String Name){
+	public void setName(Name Name){
 		this.name = Name;
 	}//end setName method
 	
@@ -83,5 +82,10 @@ public class Person extends ID{
 	public void setGender(String gender){
 		this.gender = gender;
 	}//end setGender method
+	
+	public void setDOB(Date dob)
+	{
+		this.DOB = dob;
+	}
 	
 }//end Person class
