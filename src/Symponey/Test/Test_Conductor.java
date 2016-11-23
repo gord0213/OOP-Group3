@@ -2,8 +2,12 @@ package Symponey.Test;
 
 
 
+import Symponey.Domain.Address;
 import Symponey.Domain.Conductor;
+import Symponey.Domain.Instrument;
+import Symponey.Domain.Name;
 import Symponey.Domain.Person;
+import Symponey.Domain.PersonBuilder;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -25,8 +29,8 @@ public class Test_Conductor extends TestCase {
  	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Ticket.testConstructors");
-		per = new Person();
-		conductor = new Conductor(per)
+		per = new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name")));
+		conductor = new Conductor(per, new Instrument("toot", false),"Jim Bob");
 		assertNotNull("\t\tTest_Conductor.testConstructors: model is null", conductor);
 	}
 	
