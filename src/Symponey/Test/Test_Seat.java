@@ -14,10 +14,12 @@ import junit.framework.TestSuite;
  */
 public class Test_Seat extends TestCase {
 
+	
+	private Seat seat;
+	
 	/**
 	 * @param name
 	 */
-	private Seat seat;
 	
 	public Test_Seat(String name) {
 		super(name);
