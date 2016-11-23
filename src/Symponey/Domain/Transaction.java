@@ -1,9 +1,13 @@
-package Symponey.Test;
+package Symponey.Domain;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class Transaction {
 
 	private final String ledgerAccount;
-	private final TimeStamp time;
+	private final String time;
 	private final Name name;
 	private final double price;
 	private final Ticket ticket;
@@ -13,12 +17,13 @@ public class Transaction {
 		this.name=name;
 		this.price=price;
 		this.ticket=ticket;
+		time = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	}
 
 	public String getLedgerAccount(){
 		return ledgerAccount;
 	}
-	public TimeStamp getTime(){
+	public String getTime(){
 		return time;
 	}
 	public Name getName(){

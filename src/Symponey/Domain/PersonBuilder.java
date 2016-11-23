@@ -1,45 +1,48 @@
 package Symponey.Domain;
+import java.util.ArrayList;
 import java.util.Date;
 
-public class PersonBuilder extends Person{
+public class PersonBuilder{
 	
-	private Person person;
+	protected ArrayList<PhoneNumber> phoneNumber;
+	protected Name name;
+	protected ArrayList<Address> address;
+	protected String gender;
+	protected Date DOB;
 	
-	public PersonBuilder(String gender, Date dob){
-		this.person = new Person();
+	public PersonBuilder(Address address, Name name){
+		this.address.add(address);
+		this.name =name; 
 	}//end PersonBuilder constructor
 	
 	public PersonBuilder gender(String gender){
-		this.person.setGender(gender);
+		this.gender = gender;
 		return this;
 	}//end gender method
 	
 	public PersonBuilder dob(Date dob){
-		this.person.setDOB(dob);
+		DOB = dob;
 		return this;
 	}//end dob method
 	
-	public PersonBuilder name(String name){
-		this.person.setName(name);
+	public PersonBuilder name(Name name){
+		this.name = name;
 		return this;
 	}//end name method
 	
-	public PersonBuilder age(int age){
-		//this.person.setAge(age);
-		return this;
-	}//end age method
-	
 	public PersonBuilder salutation(String salutation){
-		//this.person.setSalutation(salutation);
+		name.setSalutation(salutation);
 		return this;
 	}//end salutation method
 	
-	public PersonBuilder address(String address){
-		this.person.setAddress(address);//still int i....
+	public PersonBuilder address(Address address){
+		this.address.add(address);
 		return this;
 	}//end address method
 	
 	public Person build(){
+		
+		return new Person(this);
 		
 	}//end gender method
 	
