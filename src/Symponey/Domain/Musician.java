@@ -1,10 +1,7 @@
 package Symponey.Domain;
 
-<<<<<<< HEAD
-public class Musician {
+import java.util.ArrayList;
 
-}
-=======
 public class Musician extends Person{
 	
 	private Person person; 
@@ -30,4 +27,4 @@ public class Musician extends Person{
 	} //end getStageName method
 	
 }//end Musician class
->>>>>>> 52b6776... More updated
+
