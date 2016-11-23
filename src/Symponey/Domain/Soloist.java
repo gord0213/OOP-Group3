@@ -12,8 +12,9 @@ public class Soloist extends Musician{
 	 * @param per a instance of the person
 	 * @param stageName The name the person uses on stage
 	 */
-	public  Soloist(Person per, String stageName){
-		super(per, stageName);
+	public  Soloist(Person per,Instrument instra, String stageName){
+		super(per,instra, stageName);
+		instrumentExpertise = instra.getInstrument();
 	}
 	/**
 	 * 
@@ -22,12 +23,5 @@ public class Soloist extends Musician{
 	public String getExpertise(){
 		return instrumentExpertise;
 	}
-	/**Takes in a vairable and sets the soloist expertise to the passed thouhg variable
-	 * 
-	 * @param expertise the instrument that th soloist is a expertise at
-	 */
-	public void setExpertise(String expertise){
-		this.instrumentExpertise = expertise;
-	}
-	
+
 }

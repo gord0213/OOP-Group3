@@ -1,13 +1,14 @@
 package Symponey.Domain;
 import java.util.ArrayList;
 
-public class Musician{
+public class Musician extends Person{
 	
 	private Person person; 
 	private ArrayList<Instrument> instrument;
 	private String stageName; 
 	   
-	public Musician(Person per, Instrument inst, String StageName){ 
+	public Musician(Person per, Instrument inst, String StageName){ 		
+		super(per);
 		this.instrument.add(inst);
 	    this.person = per;
 	    this.stageName = StageName;
