@@ -104,9 +104,8 @@ public class Test_TicketSaleController extends TestCase {
 			   tempVenue.addInstrument(tempIntra);
 			   //created a scheduled concert with the date for today and the time of right now.
 			   ScheduledConcert schedCon = new ScheduledConcert(tempCon, new Date(), new Date().getTime(), tempVenue);
-			   //adding the concert to the season.
 			   controller.addConcert(schedCon);
-			   // making sure the added in concert equals the schedcon
+			   
 				assertEquals("\t\tTest_TicketSaleController.Mutators addConcert: equals schedCon" ,controller.getScheduledConcert(0), (schedCon));
 				
 
