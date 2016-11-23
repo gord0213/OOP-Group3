@@ -3,10 +3,7 @@ package Symponey.Test;
 
 
 import Symponey.Domain.Conductor;
-
-import java.util.Date;
-
-import Symponey.Domain.*;
+import Symponey.Domain.Person;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
