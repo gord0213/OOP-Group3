@@ -1,6 +1,8 @@
 package Symponey.Test;
 
 import Symponey.Domain.Address;
+import Symponey.Domain.BalconySeat;
+import Symponey.Domain.BoothSeat;
 import Symponey.Domain.Composition;
 import Symponey.Domain.Instrument;
 import Symponey.Domain.Seat;
@@ -167,20 +169,25 @@ public class Test_Venue extends TestCase{
 		venue.addInstrument(instrument);
 		
 								
-		assertFalse("\t\tTest_Venue.testNormalBehaviors.checkInstrument test 1 Failed", venue.checkInstrument(instrument2) == false);
+		assertFalse("\t\tTest_Venue.testNormalBehaviors.checkInstrument test 1 Failed", venue.checkInstrument(instrument2));
 								
-		assertTrue("\t\tTest_Venue.testNormalBehaviors.checkInstrument test 2 Failed", venue.checkInstrument(instrument) == true);
+		assertTrue("\t\tTest_Venue.testNormalBehaviors.checkInstrument test 2 Failed", venue.checkInstrument(instrument));
 		
 		//----------------------------------------testing venueSoldOut----------------------------------------------
-		
+		seat = new BoothSeat(24, "seat1", "booth");
+		seat2 = new BalconySeat(16, "seat2", "Balcony");
+		seat.Taken();
 		venue = new Venue(add, "name", seat);
 		venue2 = new Venue(add2, "name2", seat2);
 		venue2.addSeat(seat);
-		venue.addSeat(seat2);
+		
 				
-		assertFalse("\t\tTest_Venue.testNormalBehaviors.venueSoldOut test 1 Failed", venue.getSeat(0) == venue2.getSeat(0));
+		assertFalse("\t\tTest_Venue.testNormalBehaviors.venueSoldOut test 1 Failed", venue2.venueSoldOut());
 				
-		assertTrue("\t\tTest_Venue.testNormalBehaviors.venueSoldOut test 2 Failed", venue.getSeat(0) == venue2.getSeat(1));
+		assertTrue("\t\tTest_Venue.testNormalBehaviors.venueSoldOut test 2 Failed", venue.venueSoldOut());
+		
+		venue.addSeat(seat);
+		assertTrue("\t\tTest_Venue.testNormalBehaviors.venueSoldOut test 3 Failed", venue.venueSoldOut());
 	}//end of test Normal Behaviors
 	
 }//end of Test_Venue
