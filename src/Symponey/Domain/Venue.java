@@ -60,6 +60,16 @@ public class Venue extends ID{
 		this.instrument.add(instrument);
 	}//end of add instrument
 	
+public void removeSeat(Seat seat){
+		
+		this.seat.remove(seat);
+	}//end of remove seat
+	
+	public void removeInstrument(Instrument instrument){
+		
+		this.instrument.remove(instrument);
+	}//end of remove instrument
+	
 	public Boolean checkInstrument(Instrument i){
 		
 		return instrument.contains(i);
