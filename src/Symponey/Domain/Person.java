@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Person extends ID{
 
-	private ArrayList<PhoneNumber> phoneNumber;
+	private ArrayList<PhoneNumber> phoneNumber = new ArrayList<PhoneNumber>();
 	private Name name;
-	private ArrayList<Address> address;
+	private ArrayList<Address> address = new ArrayList<Address>() ;
 	private String gender;
 	private Date DOB;
 	
