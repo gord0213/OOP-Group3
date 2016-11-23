@@ -19,6 +19,7 @@ public class ScheduledConcert extends Concert{
 		venue = ven;
 	}//end of constructor
 	
+		
 	public Date getDate(){
 		
 		return date;
@@ -48,5 +49,12 @@ public class ScheduledConcert extends Concert{
 		
 		this.venue = venue;
 	}//end of set venue
+
+	public Concert getConcert() {
+		
+		return super.getConcert();
+	}//end of get concert
+
+
 	
 }//end of class
