@@ -3,10 +3,15 @@ package Symponey.Test;
 
 
 import junit.framework.*;
+
+import java.util.Date;
+
+import Symponey.Domain.Address;
 import Symponey.Domain.Composition;
 import Symponey.Domain.Conductor;
 import Symponey.Domain.Movement;
 import Symponey.Domain.Person;
+import Symponey.Domain.PhoneNumber;
 import Symponey.Domain.Soloist;
 
 /**
@@ -17,6 +22,9 @@ import Symponey.Domain.Soloist;
 public class Test_Composition extends TestCase {
 	
 	private Composition comp, comp2;
+	private Address add;
+	private PhoneNumber phone;
+	private Date date;
 	
 	public Test_Composition(String name) { super(name);	}
 
@@ -43,6 +51,12 @@ public class Test_Composition extends TestCase {
 	public void testGetters() {
 		System.out.println("\tExecuting Test_Composition.testGetters");
 		
+		add = new Address();
+		phone =  new PhoneNumber();
+		date = new Date();
+		
+	
+		
 		//----------------------------------------testing getID----------------------------------------------
 		comp = new Composition("test comp");
 		comp2 = new Composition("second comp");
@@ -62,7 +76,7 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing getSoloist----------------------------------------------
 		comp = new Composition("test comp");
-		Soloist solo = new Soloist(new Person("name", null, null, "gender", null),"whoknows");
+		Soloist solo = new Soloist(new Person("name",  add, phone, "gender", date),"whoknows");
 		comp.addSoloist(solo);
 				
 		assertTrue("\t\tTest_Composition.testGetters.getSoloist test Failed", comp.getSolo(0) == solo);
@@ -81,7 +95,7 @@ public class Test_Composition extends TestCase {
 				
 		//----------------------------------------testing getConductor----------------------------------------------
 		comp = new Composition("test comp");
-		Conductor conductor = new Conductor(new Person("nameconductor", null, null, "gender", null), "whoknows");
+		Conductor conductor = new Conductor(new Person("nameconductor",  add, phone, "gender", date), "whoknows");
 		comp.setConductor(conductor);
 								
 		assertTrue("\t\tTest_Composition.testGetters.getConductor test Failed", comp.getConductor() == conductor);
@@ -96,12 +110,12 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing setConductor----------------------------------------------
 		comp = new Composition("test comp");
-		Conductor conductor = new Conductor(new Person("nameconductor", null, null, "gender", null),"whoknows");
+		Conductor conductor = new Conductor(new Person("nameconductor",  add, phone, "gender", date),"whoknows");
 		comp.setConductor(conductor);
 										
 		assertTrue("\t\tTest_Composition.testSetters.SetConductor test 1 Failed", comp.getConductor() == conductor);
 		
-		conductor = new Conductor(new Person("other conductor", null, null, "gender", null),"whoknows");
+		conductor = new Conductor(new Person("other conductor",  add, phone, "gender", date),"whoknows");
 		comp.setConductor(conductor);
 		
 		assertTrue("\t\tTest_Composition.testSetters.SetConductor test 2 Failed", comp.getConductor() == conductor);
@@ -122,8 +136,8 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing addSoloist----------------------------------------------
 		comp = new Composition("test comp");
-		Soloist solo = new Soloist(new Person("name", null, null, "gender", null),"whoknows");
-		Soloist solo2 = new Soloist(new Person("name2", null, null, "gender", null),"whoknows");
+		Soloist solo = new Soloist(new Person("name", add, phone, "gender", date),"whoknows");
+		Soloist solo2 = new Soloist(new Person("name2", add, phone, "gender", date),"whoknows");
 		comp.addSoloist(solo);
 		comp.addSoloist(solo2);
 				
