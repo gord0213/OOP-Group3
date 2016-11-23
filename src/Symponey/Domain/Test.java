@@ -18,13 +18,6 @@ public class Test {
 		System.out.println(mov);
 		Date date = new Date();
 		System.out.println(date);
-		int i=0;
-		while(i<1000)
-		{
-			// do nothing waste time
-			i++;
-		}
-		Date date2 = new Date();
-		//System.out.println(date2.getTime() - date2.getTime());
+		
 	}
 }
