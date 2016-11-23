@@ -9,12 +9,13 @@ public class Venue extends ID{
 	private ArrayList<Seat> seat;
 	private ArrayList<Instrument> instrument;
 	
-	public Venue(Address add, String name){
+	public Venue(Address add, String name, Seat seat){
 		
 		super();
 		this.address = add;
 		this.name = name;
-		seat = new ArrayList<Seat>();
+		this.seat = new ArrayList<Seat>();
+		this.seat.add(seat);
 		instrument = new ArrayList<Instrument>();
 	}//end of constructor
 	
