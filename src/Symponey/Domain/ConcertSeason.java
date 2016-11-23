@@ -74,13 +74,8 @@ public class ConcertSeason {
 		{
 			if(season.get(i).getID().equals(id))
 			{			
-				PerformedConcert temp = new PerformedConcert(season.get(i),  );
-						LocalDate.now().
-						
-						.now().getYear()
-						 Date perDate, Time perTime
-				
-				
+				PerformedConcert temp = new PerformedConcert((ScheduledConcert)season.get(i), new Date() );
+				season.set(i, temp);
 			}
 			i++;
 		}
