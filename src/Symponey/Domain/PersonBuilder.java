@@ -9,7 +9,11 @@ public class PersonBuilder{
 	protected ArrayList<Address> address = new ArrayList<Address>();
 	protected String gender;
 	protected Date DOB;
-	
+	/**
+	 * This class is used to build the Person Object;
+	 * @param address
+	 * @param name
+	 */
 	public PersonBuilder(Address address, Name name){
 		this.address.add(address);
 		this.name =name; 

@@ -14,6 +14,8 @@ public class Name {
 	    this.salutations = salut;
 	}//end Name constructor
 	
+	
+	// basic setters and getters for class.
 	public String getName(){
 		return salutations +". "+ firstName +" "+ middleName +" "+ lastName;
 	}//end getName method
