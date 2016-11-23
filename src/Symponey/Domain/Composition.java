@@ -2,6 +2,12 @@ package Symponey.Domain;
 
 import java.util.ArrayList;
 
+/**
+ *	Composition class from the group project.
+ *	extends ID
+ * @author Roseanne Page
+ * @version 1.0.0
+ */
 public class Composition extends ID {
 
 	private ArrayList<Movement> move;
@@ -44,19 +50,7 @@ public class Composition extends ID {
 		
 		return conductor;
 	}//end of get conductor
-	
-	public void setMovement(Movement move){
 		
-		this.move.add(move);
-	}//end of set movement(single)
-	
-	public void setMovement(Movement[] move){
-		
-		for(int i = 0; i < move.length; i++){
-			this.move.add(move[i]);
-		}//end of for loop
-	}//end of set movement(array)
-	
 	public void setConductor(Conductor con){
 		
 		conductor = con;
@@ -66,5 +60,32 @@ public class Composition extends ID {
 		
 		this.approved = approved;
 	}//end of setApproved
+	
+	public void addSoloist(Soloist solo){
+		
+		soloist.add(solo);
+	}//end of add soloist
+	
+	public void removeSoloist(Soloist solo){
+		
+		soloist.remove(solo);
+	}
+	
+	public void addMovement(Movement move){
+		
+		this.move.add(move);
+	}//end of add movement(single)
+			
+	public void addMovement(Movement[] move){
+		
+		for(int i = 0; i < move.length; i++){
+			this.move.add(move[i]);
+		}//end of for loop
+	}//end of add movement(array)
+	
+	public void removeMovement(Movement move){
+		
+		this.move.remove(move);
+	}//end of remove movement
 	
 }//end of class
