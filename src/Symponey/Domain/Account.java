@@ -33,13 +33,15 @@ public class Account {
 	}
 	public Ticket getTicket(int i)
 	{
-		try{
+		if(i<ticket.size())
+		{
 		return ticket.get(i);
 		}
-		catch(Exception e)
+		else
 		{
-			System.out.println("There is no tickets in this account owned by " name.getName());
+			return null;
 		}
+		
 	}
 	/**
 	 * if you want to subtract amount from the balance then input a negative number. 
@@ -63,12 +65,13 @@ public class Account {
 	
 	public CreditCard getCreditCard(int i)
 	{
-		try{
+		if(i<creditCard.size())
+		{
 		return creditCard.get(i);
 		}
-		catch(Exception e)
+		else
 		{
-			System.out.println("There is no CreditCards in this account owned by " name.getName());
+			return null;
 		}
 	}
 	

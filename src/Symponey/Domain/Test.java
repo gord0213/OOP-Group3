@@ -1,5 +1,8 @@
 package Symponey.Domain;
 
+import java.sql.Time;
+import java.util.Date;
+
 public class Test {
 
 	
@@ -13,7 +16,8 @@ public class Test {
 		Movement mov = new Movement("Test");
 		System.out.println(mov.toString());
 		System.out.println(mov);
-		
+		Date date = new Date();
+		System.out.println(date);
 		
 	}
 }
