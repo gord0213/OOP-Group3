@@ -85,16 +85,15 @@ public class Test_TicketSaleController extends TestCase {
 			   tempIntra = new Instrument("Grand Piano", true);
 			   tempVenue.addInstrument(tempIntra);
 			   ScheduledConcert schedCon = new ScheduledConcert(tempCon, new Date(), new Date().getTime(), tempVenue);
+			   controller.addConcert(schedCon);
 			   
-			   
-				assertEquals("\t\tTest_TicketSaleController.Mutators setsignaltonoise: equals 200" ,shannonsModel1.getSignalToNoise(), 200.0);
-				assertEquals("\t\tTest_TicketSaleController.Mutators setBandWidth: equals 100" ,shannonsModel1.getBandWidth(), 100.0);
+				assertEquals("\t\tTest_TicketSaleController.Mutators addConcert: equals schedCon" ,controller.getScheduledConcert(0), (schedCon));
 				
 
 		
 		
 		}
-		}
+		
 	
 		
 		public static void main(String[] args) {
