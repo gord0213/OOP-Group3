@@ -12,13 +12,11 @@ import java.util.Date;
 public class PerformedConcert extends ScheduledConcert{
 
 	private Date performedDate;
-	private Time performedTime;
 	
-	public PerformedConcert(ScheduledConcert scheduledCon, Date perDate, Time perTime) {
+	public PerformedConcert(ScheduledConcert scheduledCon, Date perDate) {
 		
 		super(scheduledCon.getConcert(),scheduledCon.getDate(),scheduledCon.getTime(),scheduledCon.getVenue());
 		performedDate = perDate;
-		performedTime = perTime;
 	}//end of constructor
 	
 	public Date getPerformedDate(){
@@ -26,9 +24,6 @@ public class PerformedConcert extends ScheduledConcert{
 		return performedDate;
 	}//end of get performed date
 	
-	public Time getPerformedTime(){
-		
-		return performedTime;
-	}//end of get performed time
+
 
 }//end of class
