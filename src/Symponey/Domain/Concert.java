@@ -60,5 +60,10 @@ public class Concert extends ID{
 		return this == con;
 	}//end of is same
 	
+	public Concert getConcert() {
+		
+		return this;
+	}//end of get concert
+	
 	
 }//end of class
