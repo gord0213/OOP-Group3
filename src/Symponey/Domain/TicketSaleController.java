@@ -6,7 +6,7 @@ public class TicketSaleController {
 
 	private ArrayList<Account> account = new ArrayList<Account>();
 	private ArrayList<Transaction> transaction = new ArrayList<Transaction>();
-	private ConcertSeason con ;
+	private ArrayList<ConcertSeason> con = new ArrayList<ConcertSeason>() ;
 	
 	public TicketSaleController(ConcertSeason con )
 	{
@@ -76,17 +76,21 @@ public class TicketSaleController {
 	{
 		return null;
 	}
-	public ArrayList<Seat> getFreeSeats(ID id)
+	public ArrayList<Seat> getFreeSeats(String id)
 	{
 		return null;
 	}
-	public ArrayList<Seat> getTakenSeats(ID id)
+	public ArrayList<Seat> getTakenSeats(String id)
 	{
 		return null;
 	}
-	public Musician getMusician(ID id)
+	public Musician getMusician(String id)
 	{
 	return null;	
+	}
+	public void addAccount(Account acc)
+	{
+		this.account.add(acc);
 	}
 	public void addCompoisition(ScheduledConcert con)
 	{
@@ -112,7 +116,7 @@ public class TicketSaleController {
 	{
 		
 	}
-	public void erformConcert(ScheduledConcert con)
+	public void performConcert(ScheduledConcert con)
 	{
 		
 	}
