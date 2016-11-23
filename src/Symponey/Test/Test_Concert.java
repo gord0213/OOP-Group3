@@ -1,7 +1,6 @@
 package Symponey.Test;
 
 import Symponey.Domain.Concert;
-import Symponey.Domain.Movement;
 import junit.framework.*;
 
 /**
