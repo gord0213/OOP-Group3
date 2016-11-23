@@ -1,5 +1,11 @@
 package Symponey.Domain;
 
+/**
+ *	Movement class from the group project.
+ *	extends ID 
+ * @author Roseanne Page
+ * @version 1.0.0
+ */
 public class Movement extends ID{
 
 	private String name;
