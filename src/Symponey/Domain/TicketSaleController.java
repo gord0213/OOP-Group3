@@ -42,10 +42,6 @@ public class TicketSaleController {
 	{
 		return con.get(con.size()-1).getScheduledConcert(i);
 	}
-	public Concert getScheduledConcert(int i)
-	{
-		return con.get(con.size()-1).getScheduledConcert(i);
-	}
 	
 	//All of these are unimplemented process not required
 	public void addConcertSeason(ConcertSeason conSea)
