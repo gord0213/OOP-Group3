@@ -71,7 +71,7 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing getSoloist----------------------------------------------
 		comp = new Composition("test comp");
-		Soloist solo = new Soloist(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false), "whoknows");
+		Soloist solo = new Soloist(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false), "whoknows");
 		comp.addSoloist(solo);
 				
 		assertTrue("\t\tTest_Composition.testGetters.getSoloist test Failed", comp.getSolo(0) == solo);
@@ -90,7 +90,7 @@ public class Test_Composition extends TestCase {
 				
 		//----------------------------------------testing getConductor----------------------------------------------
 		comp = new Composition("test comp");
-		Conductor conductor = new Conductor(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false), "whoknows");
+		Conductor conductor = new Conductor(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false), "whoknows");
 		comp.setConductor(conductor);
 								
 		assertTrue("\t\tTest_Composition.testGetters.getConductor test Failed", comp.getConductor() == conductor);
@@ -105,12 +105,12 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing setConductor----------------------------------------------
 		comp = new Composition("test comp");
-		Conductor conductor = new Conductor(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false),"whoknows");
+		Conductor conductor = new Conductor(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false),"whoknows");
 		comp.setConductor(conductor);
 										
 		assertTrue("\t\tTest_Composition.testSetters.SetConductor test 1 Failed", comp.getConductor() == conductor);
 		
-		conductor = new Conductor(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false),"whoknows");
+		conductor = new Conductor(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false),"whoknows");
 		comp.setConductor(conductor);
 		
 		assertTrue("\t\tTest_Composition.testSetters.SetConductor test 2 Failed", comp.getConductor() == conductor);
@@ -131,8 +131,8 @@ public class Test_Composition extends TestCase {
 		
 		//----------------------------------------testing addSoloist----------------------------------------------
 		comp = new Composition("test comp");
-		Soloist solo = new Soloist(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false),"whoknows");
-		Soloist solo2 = new Soloist(new Person(new PersonBuilder(new Address(), new Name())),new Instrument("toot", false),"whoknows");
+		Soloist solo = new Soloist(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false),"whoknows");
+		Soloist solo2 = new Soloist(new Person(new PersonBuilder(new Address("1", "1", "1", "1", "1", "1", "1", "blah"), new Name("name", "name", "name", "name"))),new Instrument("toot", false),"whoknows");
 		comp.addSoloist(solo);
 		comp.addSoloist(solo2);
 				
