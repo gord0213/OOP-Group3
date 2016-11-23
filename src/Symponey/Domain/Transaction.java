@@ -12,6 +12,13 @@ public class Transaction {
 	private final double price;
 	private final Ticket ticket;
 
+	/**
+	 * This class is immutable so only getters are created. This is because once a transaction is complete you should not be able to chang it.
+	 * @param ledger
+	 * @param name
+	 * @param price
+	 * @param ticket
+	 */
 	public	Transaction(String ledger, Name name, double price, Ticket ticket){
 		this.ledgerAccount=ledger;
 		this.name=name;

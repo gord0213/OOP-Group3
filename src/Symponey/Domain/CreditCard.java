@@ -7,6 +7,14 @@ public class CreditCard {
 	private String cvs;
 	private Name name;
 	
+	/**
+	 * This creates the class and all of these things are required
+	 * This class is setup as immutable so nothing can be set once it has been created.
+	 * @param card
+	 * @param cardNumber
+	 * @param cvs
+	 * @param name
+	 */
 	public CreditCard(String card, String cardNumber, String cvs,Name name)
 	{
 		this.card = card;
@@ -15,6 +23,7 @@ public class CreditCard {
 		this.name = name;
 	}
 	
+	//Basic getters for all the attributes
 	public String getCreditCardNumber()
 	{
 		return num;
