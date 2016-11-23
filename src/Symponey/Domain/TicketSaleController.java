@@ -6,11 +6,11 @@ public class TicketSaleController {
 
 	private ArrayList<Account> account = new ArrayList<Account>();
 	private ArrayList<Transaction> transaction = new ArrayList<Transaction>();
-	private ConcertSeason con ;
+	private ArrayList<ConcertSeason> con ;
 	
 	public TicketSaleController(ConcertSeason con )
 	{
-		this.con = con;
+		this.con.add(con);
 	}
 	
 	/**
@@ -36,10 +36,14 @@ public class TicketSaleController {
 	 */
 	public void addConcert(ScheduledConcert con)
 	{
-		this.con.addScheduledConcert(con);
+		this.con.get(this.con.size() - 1).addScheduledConcert(con);
 	}
 	
 	//All of these are unimplemented process not required
+	public void addConcertSeason(ConcertSeason conSea)
+	{
+		
+	}
 	public void ticketCreditToAccount()
 	{
 		
