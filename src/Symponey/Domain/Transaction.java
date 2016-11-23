@@ -13,7 +13,7 @@ public class Transaction {
 	private final Ticket ticket;
 
 	/**
-	 * This class is immutable so only getters are created. This is because once a transaction is complete you should not be able to chang it.
+	 * This class is immutable so only getters are created. This is because once a transaction is complete you should not be able to change it.
 	 * @param ledger
 	 * @param name
 	 * @param price
