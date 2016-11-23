@@ -3,6 +3,12 @@ package Symponey.Domain;
 import java.sql.Time;
 import java.util.Date;
 
+/**
+ *	PerformedConcert class from the group project.
+ *	extends ScheduledConcert 
+ * @author Roseanne Page
+ * @version 1.0.0
+ */
 public class PerformedConcert extends ScheduledConcert{
 
 	private Date performedDate;

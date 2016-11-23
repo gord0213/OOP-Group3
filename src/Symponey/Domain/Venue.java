@@ -2,6 +2,12 @@ package Symponey.Domain;
 
 import java.util.ArrayList;
 
+/**
+ *	Venue class from the group project.
+ *	extends ID 
+ * @author Roseanne Page
+ * @version 1.0.0
+ */
 public class Venue extends ID{
 
 	private String name;
