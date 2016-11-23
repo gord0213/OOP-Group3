@@ -15,7 +15,7 @@ public class PersonBuilder extends Person{
 	}//end gender method
 	
 	public PersonBuilder dob(Date dob){
-		this.person.setDOB(dob);
+		person.setDOB(dob);
 		return this;
 	}//end dob method
 	
