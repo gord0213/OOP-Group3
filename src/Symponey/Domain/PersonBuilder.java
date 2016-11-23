@@ -25,11 +25,7 @@ public class PersonBuilder{
 	}//end gender method
 	
 	public PersonBuilder dob(Date dob){
-
-		this.person.setDOB(dob);
-
 		DOB = dob;
-
 		return this;
 	}//end dob method
 	

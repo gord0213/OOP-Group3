@@ -31,12 +31,12 @@ public class TicketSaleController {
 		
 	}
 	
-	
-	public void addConcert()
+	/**
+	 * The only method that has to be tested in the JUNIT testing
+	 */
+	public void addConcert(ScheduledConcert con)
 	{
-		
-		
-		
+		this.con.addScheduledConcert(con);
 	}
 	
 	//All of these are unimplemented process not required

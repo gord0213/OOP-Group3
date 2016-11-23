@@ -1,4 +1,5 @@
 package Symponey.Domain;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -88,7 +89,7 @@ public class Person extends ID{
 	 * @return Age in int
 	 */
 	public int getAge(){
-		return 0;
+		return LocalDate.now().getYear() -DOB.getYear();
 	}//end getAge method
 	
 	/**
@@ -96,7 +97,7 @@ public class Person extends ID{
 	 * @return Date
 	 */
 	public Date getDOB(){
-		return this.DOB;
+		return DOB;
 	}//end getDOB method
 	
 	/**
@@ -104,7 +105,7 @@ public class Person extends ID{
 	 * @return String
 	 */
 	public String getSalutation(){
-		return this.name.getSalutation();
+		return name.getSalutation();
 	}//end getSalutation method
 	
 	/**
@@ -113,8 +114,14 @@ public class Person extends ID{
 	 * @return Address
 	 */
 	public Address getAddress(int i){
-		return this.address.getAddress();
-		//int i ????
+		if(i<address.size())
+		{
+			return address.get(i) ;
+		}
+		else
+		{
+			return null;
+		}
 	}//end getAddress method
 	
 	//Basic setters.
@@ -124,20 +131,12 @@ public class Person extends ID{
 	
 	
 	public void setAddress(Address address){
-		this.address = address;
+		this.address.add(address);
 	}//end setAddress method
 	
 	public void setPhoneNumber(PhoneNumber num){
-		this.phoneNumber = num;
+		phoneNumber.add(num);
 	}//end setPhoneNumber method
-	
-	public void setID(int id){
-		
-	}//end setID method
-	
-	public void setDOB(Date date){
-		this.DOB = date;
-	}//end setDOB method
 	
 	public void setGender(String gender){
 		this.gender = gender;

@@ -11,7 +11,7 @@ import junit.framework.TestSuite;
 public class Test_Conductor extends TestCase {
 	
 	private Conductor conductor;
-	private PersonBuilder per;
+	private Person per;
 	public Test_Conductor(String name) { super(name);	}
 
 	public static Test suite() { return new TestSuite(Test_Ticket.class);		}
@@ -25,11 +25,8 @@ public class Test_Conductor extends TestCase {
  	 */
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Ticket.testConstructors");
-		Date date = new Date(System.currentTimeMillis());
-		
-		per = new PersonBuilder("male", date );
-		Instrument instr = new Instrument("guitar", true);
-		conductor = new Conductor(per, instr , "Billy Bob");
+		per = new Person();
+		conductor = new Conductor(per)
 		assertNotNull("\t\tTest_Conductor.testConstructors: model is null", conductor);
 	}
 	
