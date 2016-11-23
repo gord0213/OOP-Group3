@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class PersonBuilder{
 	
-	protected ArrayList<PhoneNumber> phoneNumber;
+	protected ArrayList<PhoneNumber> phoneNumber = new ArrayList<PhoneNumber>();
 	protected Name name;
-	protected ArrayList<Address> address;
+	protected ArrayList<Address> address = new ArrayList<Address>();
 	protected String gender;
 	protected Date DOB;
 	
