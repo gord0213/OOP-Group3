@@ -21,11 +21,11 @@ public class PersonBuilder{
 	}//end gender method
 	
 	public PersonBuilder dob(Date dob){
-<<<<<<< HEAD
+
 		this.person.setDOB(dob);
-=======
+
 		DOB = dob;
->>>>>>> 7e6ecd9... updated Builder actual commit
+
 		return this;
 	}//end dob method
 	
