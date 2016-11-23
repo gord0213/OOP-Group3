@@ -2,6 +2,7 @@ package Symponey.Test;
 
 import java.util.Date;
 
+import Symponey.Domain.Person;
 import Symponey.Domain.Soloist;
 import Symponey.Domain.Ticket;
 import junit.framework.Test;

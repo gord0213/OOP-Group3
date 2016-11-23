@@ -28,7 +28,9 @@ public class Test_Movement extends TestCase {
 	public void testConstructors() {
 		System.out.println("\tExecuting Test_Movement.testConstructors");
 		
-		mov = new Movement("test movement");
+		mov = new Movement("\ttest movement");
+		System.out.println("\t" +mov.getID());
+		System.out.println("\tIn constructor" + mov);
 		assertNotNull("\t\tTest_Movement.testConstructors: Movement object mov is null", mov);
 	}//end of constructor
 	
