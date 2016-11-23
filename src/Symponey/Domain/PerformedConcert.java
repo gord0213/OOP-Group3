@@ -1,6 +1,5 @@
 package Symponey.Domain;
 
-import java.sql.Time;
 import java.util.Date;
 
 /**
