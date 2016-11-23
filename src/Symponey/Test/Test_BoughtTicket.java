@@ -29,7 +29,7 @@ public class Test_BoughtTicket extends TestCase{
 		id = "";
 		seat = new Seat(15, "D15");
 		date = new Date();
-		boughtTicket = new BoughtTicket(id, seat, date);
+		boughtTicket = new BoughtTicket(seat, date);
 		assertNotNull("\t\tTest_BoughtTicket.testConstructors: model is null", boughtTicket);
 	}
 }
