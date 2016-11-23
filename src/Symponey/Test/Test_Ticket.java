@@ -36,7 +36,7 @@ public class Test_Ticket extends TestCase {
 		id = "";
 		seat = new Seat(15, "D15");
 		date = new Date();
-		ticket = new Ticket(id, seat, date);
+		ticket = new Ticket(seat, date);
 		assertNotNull("\t\tTest_ShannonsModel.testConstructors: model is null", ticket);
 	}
 	
@@ -45,7 +45,7 @@ public class Test_Ticket extends TestCase {
 		id = "Identification";
 		seat = new Seat(15, "D15");
 		date = new Date();
-		ticket = new Ticket(id, seat, date);
+		ticket = new Ticket(seat, date);
 		assertNotNull("\t\tTest_Ticket.testAccessor: Ticket is null", ticket);
 		assertTrue("\t\tTest_Ticket.testAccessors.getID Failed", ticket.getID() == id);
 		assertTrue("\t\tTest_Ticket.testAccessors.getID Failed", ticket.getSeat() == seat);
