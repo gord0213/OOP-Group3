@@ -1,4 +1,6 @@
 package Symponey.Domain;
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -6,9 +8,9 @@ import java.util.Date;
 public class ConcertSeason {
 
 	
-	private ArrayList<Concert> season ;
+	private ArrayList<Concert> season = new ArrayList<Concert>() ;
 	private Date startDate;
-	private 
+	 
 	public ConcertSeason(Date startDate)
 	{
 		this.startDate = startDate;
@@ -31,15 +33,15 @@ public class ConcertSeason {
 	
 	public int getLengthOfSeason()
 	{
-		Date store ;
+		Date store = new Date(); ;
 		int i =0;
 		while(i<season.size())
 		{
-			if(season.get(i).getClass.equals(ScheduledConcert))
+			if(season.get(i).getClass().equals("ScheduledConcert"))
 			{
-				if(store.before(season.get(i)))
+				if(store.before(((ScheduledConcert) season.get(i)).getDate()))
 				{
-					store = season.get(i);
+					store = ((ScheduledConcert) season.get(i)).getDate();
 				}
 				
 			}
@@ -57,7 +59,7 @@ public class ConcertSeason {
 		int i =0;
 		while(i<season.size())
 		{
-			if(season.get(i).getID.equals(id))
+			if(season.get(i).getID().equals(id))
 			{
 				season.remove(i);
 			}
@@ -70,13 +72,15 @@ public class ConcertSeason {
 		int i =0;
 		while(i<season.size())
 		{
-			if(season.get(i).getID.equals(id))
-			{
-				+ScheduledConcert(date:Date,time:Time, Venue ven)
-			
-			
-			//Has to wait to build this until it is completed.
-				PerformedConcert temp = new PerformedConcert()
+			if(season.get(i).getID().equals(id))
+			{			
+				PerformedConcert temp = new PerformedConcert(season.get(i),  );
+						LocalDate.now().
+						
+						.now().getYear()
+						 Date perDate, Time perTime
+				
+				
 			}
 			i++;
 		}

@@ -13,7 +13,7 @@ public class Composition extends ID {
 	private ArrayList<Movement> move;
 	private Boolean approved;
 	private String composer;
-	private ArrayList<Soloist> soloist;
+	private ArrayList<Soloist> soloist ;
 	private Conductor conductor;
 	
 	public Composition(String composer){

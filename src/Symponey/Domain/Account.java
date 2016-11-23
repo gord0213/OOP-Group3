@@ -9,8 +9,8 @@ public class Account {
 	private final String email;
 	private double balance = 0.0;
 	private PhoneNumber phoneNumber;
-	private ArrayList<Ticket> ticket;
-	private ArrayList<CreditCard> creditCard;
+	private ArrayList<Ticket> ticket = new ArrayList<Ticket>();
+	private ArrayList<CreditCard> creditCard = new ArrayList<CreditCard>();
 	
 	public Account(Name name, String email,PhoneNumber phoneNumber)
 	{

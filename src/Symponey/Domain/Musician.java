@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Musician extends Person{
 	
 	private Person person; 
-	private ArrayList<Instrument> instrument;
+	private ArrayList<Instrument> instrument = new ArrayList<Instrument>();
 	private String stageName; 
 	   
 	public Musician(Person per, Instrument inst, String StageName){ 		

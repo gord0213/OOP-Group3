@@ -25,6 +25,10 @@ public class Address {
 	public String getStreetName(){
 		return streetName;
 	}//end getStreetName method
+	public String getRR()
+	{
+		return rr;
+	}
 	
 	public String getAprtNumber(){
 		return aprtNum;
@@ -77,5 +81,9 @@ public class Address {
 	public void setName(String name){
 		this.name = name;
 	}//end setName method
+	public void setRR(String rr)
+	{
+		this.rr = rr;
+	}
 	
 }//end Address class
