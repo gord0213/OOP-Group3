@@ -44,6 +44,12 @@ public class TicketSaleController {
 	}
 	
 	//All of these are unimplemented process not required
+	public void addConcertSeason(ConcertSeason conSea)
+	{
+		return con.get(con.size()-1).getScheduledConcert(i);
+	}
+	
+	//All of these are unimplemented process not required
 	public void ticketCreditToAccount()
 	{
 		
