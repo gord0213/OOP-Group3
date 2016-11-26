@@ -12,7 +12,7 @@ public class BoughtTicket extends Ticket{
 	 * @param seat the seat that the ticket represents
 	 * @param date the date the ticket was bought
 	 */
-	public BoughtTicket(String id, Seat seat, Date date){
-		super(id, seat, date);
+	public BoughtTicket(Seat seat, Date date){
+		super(seat, date);
 	}
 }
